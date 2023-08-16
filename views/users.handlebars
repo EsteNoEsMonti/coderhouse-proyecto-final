@@ -1,0 +1,44 @@
+<header>
+  <nav>
+    <ul id="lista">
+      <li><a href="/products?limit=10&page=1" id="cartref">HOME 🏠</a></li>
+      <li>---(prevent click xd)------------<button><a id="delete-time" onclick="deleteAllUsers()">Delete all users ⚠</a>
+      </li></button>
+      <li><a href="/products?limit=10&page=1" id="back-to-users">Back to products</a> </li>
+    </ul>
+  </nav>
+</header>
+{{#if anyUsers}}
+<div>
+  <h3>--- Users list ----------------------------------------------------</h3>
+  {{#each list}}
+  <div>
+    <div>
+      <img src="{{this.photo}}" alt="user img" />
+      <p><b>name:</b>
+        {{this.first_name}}
+        {{this.last_name}}
+      </p>
+    </div>
+    <p><b>email:</b>
+      {{this.email}}
+    </p>
+    <p><b>role:</b>
+      {{this.role}}
+    </p>
+    <p><b>last connection:</b>
+      {{this.last_connection}}
+    </p>
+    <div>
+      <a onclick="deleteUser(this.dataset.userid)" data-userid={{this.id}}><button>Delete user</button></a>
+      <a onclick="upgradeUser(this.dataset.userid)" data-userid={{this.id}}><button disabled>Upgrade user</button></a>
+    </div>
+    <p>--------------------------------------------------------------------------------</p>
+  </div>
+  {{/each}}
+</div>
+{{else}}
+<p>the user gallery is empty</p>
+{{/if}}
+
+<script src="../public/js/users.js" type="application/javascript"></script>

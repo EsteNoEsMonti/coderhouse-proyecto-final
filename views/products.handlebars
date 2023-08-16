@@ -1,0 +1,73 @@
+<header>
+  <nav>
+    <ul id="lista">
+      <li><a href="http://localhost:8080/products?limit=10&page=1">HOME 🏠</a></li>
+      {{#if role}}
+      <li><a href="/newproducts" id="addref">Add new product ➕</a></li>
+      {{/if}}
+      <li><a href="/carts/{{this.cart}}" id="cartref">My Cart 🛒</a></li>
+      <hr />
+      <li><a href="/profile/{{uid}}" id="myprofile">Profile 👩‍🚀</a></li>
+      <li><a href="/documents/{{uid}}">Documents 📚</a></li>
+      {{#if superrole}}
+      <li><a href="/users">Users Manager 👩‍💻</a></li>
+      {{/if}}
+      </li>
+      <li><a href="#" id="logout">Logout 🚪</a></li>
+      <hr />
+    </ul>
+  </nav>
+  Hola! {{usremail}}
+</header>
+
+{{#if listExist}}
+<div>
+  {{#each list.payload}}
+  <hr />
+  <div>
+    <h2>{{this.title}}</h2>
+    <p>id: {{this.id}}</p>
+    <p>Categoría: {{this.category}}</p>
+    <p>Code:{{this.code}}</p>
+    <p>Descripción: {{this.description}}</p>
+    <p>Precio: {{this.price}}</p>
+    <p>Stock: {{this.stock}}</p>
+    <label>Cant: </label><input type="number" min="1" max="{{this.stock}}" value="1" id="quantity-{{this.code}}">
+    <button type="button"
+      onclick="addProductQuantityToCart(document.getElementById('cartref').href,this.dataset.productid,document.getElementById('quantity-{{this.code}}').value)"
+      data-productid={{this.id}} /> Add to Cart
+    </button>
+  </div>
+  {{/each}}
+</div>
+{{else}}
+<p>the product gallery is empty</p>
+{{/if}}
+<hr />
+
+<div aria-label="Page navigation">
+  <p>page:{{list.page}} | totalPages:{{list.totalPages}} | hasPrevPage:{{list.hasPrevPage}} |
+    hasNextPage:{{list.hasNextPage}}</p>
+  <div>
+    <button class="{{#unless list.hasPrevPage}}disabled{{/unless}}">
+      <a href="{{#if list.hasPrevPage}}{{list.prevLink}}{{/if}}">Prev Page</a>
+    </button>
+    <button class="{{#unless list.hasNextPage}}disabled{{/unless}}">
+      <a href="{{#if list.hasNextPage}}{{list.nextLink}}{{/if}}">Next Page</a>
+    </button>
+  </div>
+</div>
+
+<footer>
+  <hr />
+  <div>
+    {{#if chat}}
+    <div id="chat">
+      <div> <a href="/chat">Chat 📝</a></div>
+    </div>
+    {{/if}}
+  </div>
+</footer>
+
+<script src="/public/js/product.js"></script>
+<script src="/public/js/logout.js"></script>

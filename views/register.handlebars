@@ -1,0 +1,30 @@
+<div id='contenedor'>
+  <h1>New User</h1>
+  <form id='formRegister'>
+    <label for='E-mail'>E-mail:</label>
+    <input type='email' placeholder='E-mail' id='email' required />
+    <br/>
+    <label for='First Name'>First Name:</label>
+    <input type='text' placeholder='First Name' id='first_name' required />
+    <br/>
+    <label for='Last Name'>Last Name:</label>
+    <input type='text' placeholder='Last Name' required id='last_name' />
+    <br/>
+    <label for='Age'>Age:</label>
+    <input type='Number' placeholder='Age' min='14' required id='age' /> min='14'
+    <br/>
+    <label for='Password'>Password:</label>
+    <input
+      type='password'
+      placeholder='Password'
+      minlength='8'
+      required
+      id='password'
+    /> minlength='8'
+    <br/>
+    <input type='submit' value='Create' />
+  </form>
+  <a href='http://localhost:8080/login'>Back to Login</a>
+</div>
+
+<script src='/public/js/register.js' type='application/javascript'></script>

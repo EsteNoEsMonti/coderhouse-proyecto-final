@@ -1,0 +1,40 @@
+<header>
+  <nav>
+    <ul id="lista">
+      <li><a href="/products?limit=10&page=1" id="cartref">HOME 🏠</a></li>
+      <li><a href=" /products?limit=10&page=1" id="back-to-products">Back to products</i></a></li>
+    </ul>
+  </nav>
+</header>
+
+<div>
+  <form action="submit" id="formphoto"><label for="image-upload">
+      <img id="profile-image" src="{{#if profilePhoto}}{{profilePhoto}}{{else}}../assets/profile/no-photo.jpg{{/if}}"
+        alt="profile img" />
+      <button>add profile img</button>
+    </label>
+    <input class="{{uid}}" type="file" id="image-upload" accept="image/*" style="display: none;" multiple="false" />
+  </form>
+  <div>
+    <div>
+      <span>{{fullname}}</span>
+    </div>
+    <div>
+      <div>
+        <span>Email: {{email}}</span>
+      </div>
+      <div>
+        <span>Age: {{age}}</span>
+      </div>
+      <div>
+        <span>Role: {{role}}</span>
+      </div>
+      <div>
+        <span>Last Connection: {{lastconnection}}</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="../public/js/profile.js" type="application/javascript"></script>

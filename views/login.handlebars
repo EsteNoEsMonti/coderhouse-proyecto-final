@@ -1,0 +1,51 @@
+<div id='contenedor'>
+
+  <h1 id='titlecontenedor'>Login</h1>
+
+  <form id='formLogin'>
+    <label for='E-mail'>E-mail</label>
+    <input type='text' placeholder='Enter E-mail' id='email' autocomplete='off'>
+    <label for='password'>Password</label>
+    <input type='password' placeholder='Enter password' id='pass' autocomplete='off'>
+
+    <input type='submit' value='Log In' id='btnlog'>
+
+    <hr />
+    <a href='http://localhost:8080/register' id='btnreg'>Register 👋</a><br>
+
+    <a href='/api/sessions/git'>Login with Git 💻</a><br>
+
+    <a href='/forgot'>Forgot your password? 🙇‍♀️</a>
+    <br />
+    <div style="margin-top: 50px;">
+      <p>users credentials:</p>
+      <table style="border-collapse: collapse; border: 1px solid #000; padding: 10px; display: inline-block;">
+        <tr>
+          <td colspan="2" style="border-bottom: 1px solid #000; text-align: center;"><b>user admin</b></td>
+        </tr>
+        <tr>
+          <td>username:</td>
+          <td>adminCoder@coder.com</td>
+        </tr>
+        <tr>
+          <td>pwd:</td>
+          <td>adminCod3r123</td>
+        </tr>
+      </table>
+      <table style="border-collapse: collapse; border: 1px solid #000; padding: 10px; display: inline-block;">
+        <tr>
+          <td colspan="2" style="border-bottom: 1px solid #000; text-align: center;"><b>user user</b></td>
+        </tr>
+        <tr>
+          <td>username:</td>
+          <td>userCoder@coder.com</td>
+        </tr>
+        <tr>
+          <td>pwd:</td>
+          <td>adminCod3r123</td>
+        </tr>
+      </table>
+    </div>
+</div>
+
+<script src='/public/js/login.js' type='application/javascript'></script>

@@ -58,7 +58,8 @@ app.use('/api', apiRouter)
 app.use('/', viewsRouter)
 app.use(apiErrorHandler)
 
-const httpServer = app.listen(PORT, () => {
+// @ts-ignore
+const httpServer = app.listen(PORT, "0.0.0.0", () => {
   winLogger.verbose(`🌙 app listening on port ${PORT}`)
   winLogger.verbose('🌙 url project: https://coderhouse-proyecto-final-production.up.railway.app/')
 })

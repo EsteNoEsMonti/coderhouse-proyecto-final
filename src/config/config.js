@@ -9,7 +9,8 @@ const NODE_ENV = process.env.NODE_ENV || 'development'
 
 //server
 
-const PORT = process.env.NODE_PORT || 8080
+const PORT = process.env.PORT || 8080
+// const PORT = process.env.NODE_PORT || 8080
 
 //persitencia
 const PERSISTENCIA = process.env.NODE_PERSISTENCIA || 'mongoose'

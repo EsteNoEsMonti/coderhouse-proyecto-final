@@ -1,5 +1,5 @@
 async function deleteUser(uid) {
-  const FETCH_URL = `http://localhost:8080/api/users/${uid}`
+  const FETCH_URL = `https://coderhouse-proyecto-final-production.up.railway.app/api/users/${uid}`
   const { status } = await fetch(FETCH_URL, { method: 'DELETE' })
 
   if (status === 200) {
@@ -25,7 +25,7 @@ async function deleteUser(uid) {
 }
 
 async function upgradeUser(uid) {
-  const FETCH_URL = `http://localhost:8080/api/users/admin/${uid}`
+  const FETCH_URL = `https://coderhouse-proyecto-final-production.up.railway.app//api/users/admin/${uid}`
   const { status } = await fetch(FETCH_URL, { method: 'GET' })
 
   if (status === 200) {
@@ -51,7 +51,7 @@ async function upgradeUser(uid) {
 }
 
 async function deleteAllUsers() {
-  const FETCH_URL = `http://localhost:8080/api/users`
+  const FETCH_URL = `https://coderhouse-proyecto-final-production.up.railway.app//api/users`
   const { status } = await fetch(FETCH_URL, { method: 'DELETE' })
 
   if (status === 200) {

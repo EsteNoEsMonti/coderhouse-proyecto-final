@@ -22,9 +22,9 @@
 revisar el archivo -> src/config/.env.example
 ```
 **url de proyecto local**
-http://localhost:8080/
+https://coderhouse-proyecto-final-production.up.railway.app/
 **documentacion api-rest**
-http://localhost:8080/api/docs/
+https://coderhouse-proyecto-final-production.up.railway.app/api/docs/
 
 ### ususario admin:
 ```

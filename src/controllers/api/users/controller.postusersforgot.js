@@ -12,7 +12,7 @@ export async function postUsersForgot(req, res, next) {
       subject: "Password recovery",
       mensaje: `Hi,\n\n
       To reset your password, click on the following link: \n\n
-          http://localhost:8080/recover?token=${recoveryToken}\n\n
+          https://coderhouse-proyecto-final-production.up.railway.app/recover?token=${recoveryToken}\n\n
           If you have not requested a password reset, please disregard this email.\n\n
           Regards,\n
           Lucas' ecommerce`,

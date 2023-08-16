@@ -44,7 +44,7 @@ passport.use(
     {
       clientID: CLIENTID_GIT,
       clientSecret: CLIENTSCR_GIT,
-      callbackURL: "http://localhost:8080/api/sessions/gitcall",
+      callbackURL: "https://coderhouse-proyecto-final-production.up.railway.app/api/sessions/gitcall",
       passReqToCallback: true,
     },
     async (req, accessToken, refreshToken, profile, done) => {

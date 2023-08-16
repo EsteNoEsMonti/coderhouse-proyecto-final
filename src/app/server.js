@@ -60,7 +60,7 @@ app.use(apiErrorHandler)
 
 const httpServer = app.listen(PORT, () => {
   winLogger.verbose(`🌙 app listening on port ${PORT}`)
-  winLogger.verbose('🌙 url project: http://localhost:8080/')
+  winLogger.verbose('🌙 url project: https://coderhouse-proyecto-final-production.up.railway.app/')
 })
 
 export const io = new socketIOServer(httpServer)
